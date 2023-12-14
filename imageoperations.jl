@@ -37,6 +37,18 @@ function pixelRGBtoRGBA(a)
 end
 
 function scaleimage(image::Array{RGBA,2},scale)
-    
+    @inbounds newxpx = trunc(Int,size(image)[1]*scale)
+    @inbounds newypx = trunc(Int,size(image)[2]*scale)
+    if scale > 1
+        for i = 1:1:newxpx
+            for i=1:1:newypx
+            end
+        end
+    else
+        for i = 1:1:newxpx
+            for i=1:1:newypx
+            end
+        end
+    end
     #TODO: scale it here
 end
